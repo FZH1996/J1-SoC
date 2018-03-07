@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -v 25 project_r.ncd
+project.pcf
+
+Design file:              project_r.ncd
+Physical constraint file: project.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report, limited to 25 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock sys_clk_i
+------------+------------+------------+------------+------------+--------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                    | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)   | Phase  |
+------------+------------+------------+------------+------------+--------------------+--------+
+sys_rst_i   |    7.943(R)|      SLOW  |   -0.491(R)|      FAST  |sys_clk_i_IBUFG_BUFG|   0.000|
+------------+------------+------------+------------+------------+--------------------+--------+
+
+Clock sys_clk_i to Pad
+------------+-----------------+------------+-----------------+------------+-------------------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                                     | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)                    | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------------------------+--------+
+channel1_n  |         4.351(R)|      SLOW  |         2.144(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.326(R)|      SLOW  |         2.078(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+channel1_p  |         4.309(R)|      SLOW  |         2.128(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.284(R)|      SLOW  |         2.062(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+channel2_n  |         4.373(R)|      SLOW  |         2.166(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.348(R)|      SLOW  |         2.100(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+channel2_p  |         4.331(R)|      SLOW  |         2.150(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.306(R)|      SLOW  |         2.084(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+channel3_n  |         4.374(R)|      SLOW  |         2.167(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.349(R)|      SLOW  |         2.101(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+channel3_p  |         4.332(R)|      SLOW  |         2.151(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.307(R)|      SLOW  |         2.085(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+clock_n     |         4.379(R)|      SLOW  |         2.172(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.354(R)|      SLOW  |         2.106(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+clock_p     |         4.337(R)|      SLOW  |         2.156(R)|      FAST  |per_l/LVDS/videoencoder/clk35_BUFG   |   0.000|
+            |         4.312(R)|      SLOW  |         2.090(R)|      FAST  |per_l/LVDS/videoencoder/notclk35_BUFG|   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------------------------+--------+
+
+Clock to Setup on destination clock sys_clk_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |   12.095|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Dec  1 12:57:58 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 391 MB
+
+
+

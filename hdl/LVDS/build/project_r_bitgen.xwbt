@@ -1,0 +1,7 @@
+INFILE=/home/raul/Downloads/LVDS_final/build/project_r.ncd
+OUTFILE=/home/raul/Downloads/LVDS_final/build/project_r.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/raul/Downloads/LVDS_final/build
+LICENSE=WebPack
+USER_INFO=211412377_0_0_538

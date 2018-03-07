@@ -1,0 +1,567 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc6slx9-3tqg144
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : peripheral_lvds
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" into library work
+Parsing module <peripheral_lvds>.
+Analyzing Verilog file "/home/raul/Downloads/LVDS_final/serializer.v" into library work
+Parsing module <serializer>.
+Analyzing Verilog file "/home/raul/Downloads/LVDS_final/lvds_clockgen.v" into library work
+Parsing module <lvds_clockgen>.
+Analyzing Verilog file "/home/raul/Downloads/LVDS_final/video_lvds.v" into library work
+Parsing module <video_lvds>.
+Analyzing Verilog file "/home/raul/Downloads/LVDS_final/dvi_decoder.v" into library work
+Parsing module <dvi_decoder>.
+Analyzing Verilog file "/home/raul/Downloads/LVDS_final/LVDS_test.v" into library work
+Parsing module <LVDS_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 50: Port led is not connected to this instance
+
+Elaborating module <peripheral_lvds>.
+WARNING:HDLCompiler:872 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 25: Using initial value of wr since it is never assigned
+WARNING:HDLCompiler:872 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 26: Using initial value of cs since it is never assigned
+WARNING:HDLCompiler:872 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 27: Using initial value of d_in since it is never assigned
+WARNING:HDLCompiler:872 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 28: Using initial value of addr since it is never assigned
+WARNING:HDLCompiler:295 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 40: case condition never applies
+WARNING:HDLCompiler:295 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 41: case condition never applies
+WARNING:HDLCompiler:295 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 42: case condition never applies
+WARNING:HDLCompiler:295 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 43: case condition never applies
+WARNING:HDLCompiler:1016 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 57: Port CLK180 is not connected to this instance
+
+Elaborating module <LVDS_test>.
+WARNING:HDLCompiler:1127 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 44: Assignment to clkprueba ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 52: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 53: Result of 32-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <DCM_SP(CLKIN_PERIOD=10,CLKFX_MULTIPLY=3,CLKFX_DIVIDE=4)>.
+WARNING:HDLCompiler:1127 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 68: Assignment to clk_lckd ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <video_lvds>.
+
+Elaborating module <OBUFDS(IOSTANDARD="LVDS_33")>.
+WARNING:HDLCompiler:1016 - "/home/raul/Downloads/LVDS_final/lvds_clockgen.v" Line 57: Port PRE is not connected to this instance
+
+Elaborating module <lvds_clockgen>.
+
+Elaborating module <DCM_SP(CLKIN_PERIOD="15.625",DESKEW_ADJUST="0",CLKFX_MULTIPLY=7,CLKFX_DIVIDE=2)>.
+
+Elaborating module <FDP>.
+
+Elaborating module <serializer>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE")>.
+WARNING:HDLCompiler:413 - "/home/raul/Downloads/LVDS_final/serializer.v" Line 64: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/raul/Downloads/LVDS_final/serializer.v" Line 83: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 116: Result of 32-bit expression is truncated to fit in 31-bit target.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 30: Net <Red[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 31: Net <Blue[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 32: Net <Green[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 17: Net <R1[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 18: Net <R2[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 20: Net <R4[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 21: Net <R5[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 22: Net <R6[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 23: Net <R7[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 24: Net <R8[15]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <peripheral_lvds>.
+    Related source file is "/home/raul/Downloads/LVDS_final/peripheral_lvds.v".
+INFO:Xst:3210 - "/home/raul/Downloads/LVDS_final/peripheral_lvds.v" line 50: Output port <led> of the instance <LVDS> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'R1', unconnected in block 'peripheral_lvds', is tied to its initial value (0000111111111111).
+WARNING:Xst:2935 - Signal 'R2', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R4', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R5', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R6', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R7', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R8', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+    Summary:
+	no macro.
+Unit <peripheral_lvds> synthesized.
+
+Synthesizing Unit <LVDS_test>.
+    Related source file is "/home/raul/Downloads/LVDS_final/LVDS_test.v".
+        ScreenX = 1366
+        ScreenY = 768
+        BlankingVertical = 12
+        BlankingHorizontal = 50
+WARNING:Xst:647 - Input <R1<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R2<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R3<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R4<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R5<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R6<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R7<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R8<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'Red<2:0>', unconnected in block 'LVDS_test', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'Blue<2:0>', unconnected in block 'LVDS_test', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'Green<2:0>', unconnected in block 'LVDS_test', is tied to its initial value (000).
+    Register <Blue<6>> equivalent to <Blue<7>> has been removed
+    Register <Blue<5>> equivalent to <Blue<7>> has been removed
+    Register <Blue<4>> equivalent to <Blue<7>> has been removed
+    Register <Red<7>> equivalent to <Blue<3>> has been removed
+    Register <Red<6>> equivalent to <Blue<3>> has been removed
+    Register <Red<5>> equivalent to <Blue<3>> has been removed
+    Register <Red<4>> equivalent to <Blue<3>> has been removed
+    Register <Red<3>> equivalent to <Blue<3>> has been removed
+    Register <Green<7>> equivalent to <Blue<3>> has been removed
+    Register <Green<6>> equivalent to <Blue<3>> has been removed
+    Register <Green<5>> equivalent to <Blue<3>> has been removed
+    Register <Green<4>> equivalent to <Blue<3>> has been removed
+    Register <Green<3>> equivalent to <Blue<3>> has been removed
+    Found 11-bit register for signal <ContadorY>.
+    Found 1-bit register for signal <Blue<7>>.
+    Found 1-bit register for signal <Blue<3>>.
+    Found 31-bit register for signal <Contador>.
+    Found 1-bit register for signal <led>.
+    Found 11-bit register for signal <ContadorX>.
+    Found 12-bit adder for signal <n0086[11:0]> created at line 52.
+    Found 12-bit adder for signal <n0088[11:0]> created at line 53.
+    Found 31-bit adder for signal <Contador[30]_GND_2_o_add_36_OUT> created at line 116.
+    Found 8x2-bit Read Only RAM for signal <_n0112>
+    Found 11-bit comparator greater for signal <PWR_2_o_ContadorX[10]_LessThan_1_o> created at line 46
+    Found 11-bit comparator greater for signal <ContadorX[10]_PWR_2_o_LessThan_2_o> created at line 46
+    Found 11-bit comparator greater for signal <GND_2_o_ContadorY[10]_LessThan_4_o> created at line 47
+    Found 11-bit comparator greater for signal <ContadorY[10]_GND_2_o_LessThan_5_o> created at line 47
+    Found 11-bit comparator greater for signal <ContadorX[10]_PWR_2_o_LessThan_7_o> created at line 48
+    Found 11-bit comparator greater for signal <ContadorY[10]_GND_2_o_LessThan_8_o> created at line 48
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  56 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <LVDS_test> synthesized.
+
+Synthesizing Unit <video_lvds>.
+    Related source file is "/home/raul/Downloads/LVDS_final/video_lvds.v".
+WARNING:Xst:647 - Input <Red<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Green<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Blue<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <video_lvds> synthesized.
+
+Synthesizing Unit <lvds_clockgen>.
+    Related source file is "/home/raul/Downloads/LVDS_final/lvds_clockgen.v".
+    Summary:
+	no macro.
+Unit <lvds_clockgen> synthesized.
+
+Synthesizing Unit <serializer>.
+    Related source file is "/home/raul/Downloads/LVDS_final/serializer.v".
+    Found 3-bit register for signal <outcount>.
+    Found 2-bit register for signal <shiftdata>.
+    Found 14-bit register for signal <n0019>.
+    Found 1-bit register for signal <datacount>.
+    Found 1-bit register for signal <DataInBuffer>.
+    Found 1-bit register for signal <SendOK>.
+    Found 1-bit adder for signal <datacount_PWR_10_o_add_1_OUT<0>> created at line 64.
+    Found 3-bit adder for signal <outcount[2]_GND_10_o_add_8_OUT> created at line 83.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <serializer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x2-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 11
+ 1-bit adder                                           : 4
+ 12-bit adder                                          : 2
+ 3-bit adder                                           : 4
+ 31-bit adder                                          : 1
+# Registers                                            : 29
+ 1-bit register                                        : 13
+ 11-bit register                                       : 2
+ 14-bit register                                       : 4
+ 2-bit register                                        : 5
+ 3-bit register                                        : 4
+ 31-bit register                                       : 1
+# Comparators                                          : 6
+ 11-bit comparator greater                             : 6
+# Multiplexers                                         : 37
+ 2-bit 2-to-1 multiplexer                              : 24
+ 3-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <LVDS_test>.
+The following registers are absorbed into counter <Contador>: 1 register on signal <Contador>.
+The following registers are absorbed into counter <ContadorX>: 1 register on signal <ContadorX>.
+INFO:Xst:3226 - The RAM <Mram__n0112> will be implemented as a BLOCK RAM, absorbing the following register(s): <Blue<7>_Blue<3>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk6x>         | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ContadorX<9:7>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <LVDS_test> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serializer>.
+The following registers are absorbed into counter <outcount>: 1 register on signal <outcount>.
+The following registers are absorbed into counter <datacount>: 1 register on signal <datacount>.
+Unit <serializer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x2-bit single-port block Read Only RAM               : 1
+# Adders/Subtractors                                   : 1
+ 12-bit adder                                          : 1
+# Counters                                             : 10
+ 1-bit up counter                                      : 4
+ 11-bit up counter                                     : 1
+ 3-bit up counter                                      : 4
+ 31-bit up counter                                     : 1
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+# Comparators                                          : 6
+ 11-bit comparator greater                             : 6
+# Multiplexers                                         : 97
+ 1-bit 2-to-1 multiplexer                              : 88
+ 2-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <peripheral_lvds> ...
+
+Optimizing unit <LVDS_test> ...
+
+Optimizing unit <video_lvds> ...
+
+Optimizing unit <serializer> ...
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_0> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_4> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_5> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_6> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_7> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_11> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_12> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel1_ser/buffer_0_13> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_0> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_1> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_5> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_6> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_7> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_8> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_12> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel2_ser/buffer_0_13> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel3_ser/buffer_0_6> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/channel3_ser/buffer_0_13> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_2> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_3> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_4> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_9> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_10> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_11> (without init value) has a constant value of 0 in block <peripheral_lvds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <LVDS/Contador_30> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_29> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_28> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_27> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_26> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_25> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_24> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_23> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_22> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_21> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_20> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_19> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_18> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_17> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_16> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_15> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_14> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_13> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_12> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_11> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_10> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_9> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_8> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_7> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_6> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_5> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_4> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_3> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_2> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_1> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/Contador_0> of sequential type is unconnected in block <peripheral_lvds>.
+WARNING:Xst:2677 - Node <LVDS/led> of sequential type is unconnected in block <peripheral_lvds>.
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_8> in Unit <peripheral_lvds> is equivalent to the following FF/Latch, which will be removed : <LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_13> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_0> in Unit <peripheral_lvds> is equivalent to the following 3 FFs/Latches, which will be removed : <LVDS/videoencoder/channel3_ser/outcount_0> <LVDS/videoencoder/channel2_ser/outcount_0> <LVDS/videoencoder/channel1_ser/outcount_0> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1> in Unit <peripheral_lvds> is equivalent to the following 3 FFs/Latches, which will be removed : <LVDS/videoencoder/channel3_ser/outcount_1> <LVDS/videoencoder/channel2_ser/outcount_1> <LVDS/videoencoder/channel1_ser/outcount_1> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_2> in Unit <peripheral_lvds> is equivalent to the following 3 FFs/Latches, which will be removed : <LVDS/videoencoder/channel3_ser/outcount_2> <LVDS/videoencoder/channel2_ser/outcount_2> <LVDS/videoencoder/channel1_ser/outcount_2> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/channel3_ser/buffer_0_4> in Unit <peripheral_lvds> is equivalent to the following FF/Latch, which will be removed : <LVDS/videoencoder/channel3_ser/buffer_0_3> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/channel3_ser/buffer_0_5> in Unit <peripheral_lvds> is equivalent to the following 6 FFs/Latches, which will be removed : <LVDS/videoencoder/channel2_ser/buffer_0_4> <LVDS/videoencoder/channel2_ser/buffer_0_3> <LVDS/videoencoder/channel2_ser/buffer_0_2> <LVDS/videoencoder/channel1_ser/buffer_0_3> <LVDS/videoencoder/channel1_ser/buffer_0_2> <LVDS/videoencoder/channel1_ser/buffer_0_1> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/channel3_ser/buffer_0_10> in Unit <peripheral_lvds> is equivalent to the following FF/Latch, which will be removed : <LVDS/videoencoder/channel3_ser/buffer_0_11> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/channel3_ser/buffer_0_12> in Unit <peripheral_lvds> is equivalent to the following 6 FFs/Latches, which will be removed : <LVDS/videoencoder/channel2_ser/buffer_0_11> <LVDS/videoencoder/channel2_ser/buffer_0_10> <LVDS/videoencoder/channel2_ser/buffer_0_9> <LVDS/videoencoder/channel1_ser/buffer_0_10> <LVDS/videoencoder/channel1_ser/buffer_0_9> <LVDS/videoencoder/channel1_ser/buffer_0_8> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/datacount> in Unit <peripheral_lvds> is equivalent to the following 3 FFs/Latches, which will be removed : <LVDS/videoencoder/channel3_ser/datacount> <LVDS/videoencoder/channel2_ser/datacount> <LVDS/videoencoder/channel1_ser/datacount> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/DataInBuffer> in Unit <peripheral_lvds> is equivalent to the following 3 FFs/Latches, which will be removed : <LVDS/videoencoder/channel3_ser/DataInBuffer> <LVDS/videoencoder/channel2_ser/DataInBuffer> <LVDS/videoencoder/channel1_ser/DataInBuffer> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/clockgenerator/lvdsclkman/SendOK> in Unit <peripheral_lvds> is equivalent to the following 3 FFs/Latches, which will be removed : <LVDS/videoencoder/channel3_ser/SendOK> <LVDS/videoencoder/channel2_ser/SendOK> <LVDS/videoencoder/channel1_ser/SendOK> 
+INFO:Xst:2261 - The FF/Latch <LVDS/videoencoder/channel2_ser/shiftdata_0> in Unit <peripheral_lvds> is equivalent to the following FF/Latch, which will be removed : <LVDS/videoencoder/channel1_ser/shiftdata_1> 
+Found area constraint ratio of 100 (+ 0) on block peripheral_lvds, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 129
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 20
+#      LUT2                        : 24
+#      LUT3                        : 16
+#      LUT4                        : 1
+#      LUT5                        : 5
+#      LUT6                        : 15
+#      MUXCY                       : 20
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 57
+#      FD                          : 6
+#      FDC                         : 23
+#      FDCE                        : 7
+#      FDE                         : 11
+#      FDR                         : 6
+#      ODDR2                       : 4
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 5
+#      IBUFG                       : 1
+#      OBUFDS                      : 4
+# DCMs                             : 2
+#      DCM_SP                      : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              57  out of  11440     0%  
+ Number of Slice LUTs:                   85  out of   5720     1%  
+    Number used as Logic:                85  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     91
+   Number with an unused Flip Flop:      34  out of     91    37%  
+   Number with an unused LUT:             6  out of     91     6%  
+   Number of fully used LUT-FF pairs:    51  out of     91    56%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    102     8%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+clk                                | DCM_SP:CLKFX+DCM_SP:CLK0    | 43    |
+clk                                | DCM_SP:CLKFX+DCM_SP:CLKFX   | 15    |
+clk                                | DCM_SP:CLKFX+DCM_SP:CLKFX180| 4     |
+-----------------------------------+-----------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.634ns (Maximum Frequency: 130.997MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.634ns (frequency: 130.997MHz)
+  Total number of paths / destination ports: 740 / 116
+-------------------------------------------------------------------------
+Delay:               2.908ns (Levels of Logic = 1)
+  Source:            LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1 (FF)
+  Destination:       LVDS/videoencoder/clockgenerator/lvdsclkman/shiftdata_1 (FF)
+  Source Clock:      clk rising 2.6X
+  Destination Clock: clk rising 2.6X
+
+  Data Path: LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1 to LVDS/videoencoder/clockgenerator/lvdsclkman/shiftdata_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             13   0.447   1.161  LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1 (LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1)
+     LUT4:I1->O            7   0.205   0.773  LVDS/videoencoder/clockgenerator/lvdsclkman/_n0067_inv1 (LVDS/videoencoder/clockgenerator/lvdsclkman/_n0067_inv)
+     FDCE:CE                   0.322          LVDS/videoencoder/clockgenerator/lvdsclkman/shiftdata_0
+    ----------------------------------------
+    Total                      2.908ns (0.974ns logic, 1.934ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.077|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.21 secs
+ 
+--> 
+
+
+Total memory usage is 391032 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  105 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

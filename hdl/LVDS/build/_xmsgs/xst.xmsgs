@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 50: Port <arg fmt="%s" index="1">led</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 25: Using initial value of <arg fmt="%s" index="1">wr</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 26: Using initial value of <arg fmt="%s" index="1">cs</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 27: Using initial value of <arg fmt="%s" index="1">d_in</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 28: Using initial value of <arg fmt="%s" index="1">addr</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 40: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 41: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 42: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 43: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 57: Port <arg fmt="%s" index="1">CLK180</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 44: Assignment to <arg fmt="%s" index="1">clkprueba</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 52: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 53: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 68: Assignment to <arg fmt="%s" index="1">clk_lckd</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/raul/Downloads/LVDS_final/lvds_clockgen.v" Line 57: Port <arg fmt="%s" index="1">PRE</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/raul/Downloads/LVDS_final/serializer.v" Line 64: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/raul/Downloads/LVDS_final/serializer.v" Line 83: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 116: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">31</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 30: Net &lt;<arg fmt="%s" index="1">Red[2]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 31: Net &lt;<arg fmt="%s" index="1">Blue[2]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/LVDS_test.v" Line 32: Net &lt;<arg fmt="%s" index="1">Green[2]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 17: Net &lt;<arg fmt="%s" index="1">R1[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 18: Net &lt;<arg fmt="%s" index="1">R2[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 20: Net &lt;<arg fmt="%s" index="1">R4[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 21: Net &lt;<arg fmt="%s" index="1">R5[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 22: Net &lt;<arg fmt="%s" index="1">R6[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 23: Net &lt;<arg fmt="%s" index="1">R7[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/raul/Downloads/LVDS_final/peripheral_lvds.v" Line 24: Net &lt;<arg fmt="%s" index="1">R8[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/raul/Downloads/LVDS_final/peripheral_lvds.v</arg>&quot; line <arg fmt="%s" index="2">50</arg>: Output port &lt;<arg fmt="%s" index="3">led</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">LVDS</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R1</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000111111111111</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R2</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R4</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R5</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R6</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R7</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">R8</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">peripheral_lvds</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R1&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R2&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R3&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R4&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R5&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R6&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R7&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">R8&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">Red&lt;2:0&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">LVDS_test</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">Blue&lt;2:0&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">LVDS_test</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">Green&lt;2:0&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">LVDS_test</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Red&lt;7:6&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Green&lt;7:6&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Blue&lt;7:6&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram__n0112</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel1_ser/buffer_0_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/buffer_0_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel3_ser/buffer_0_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel3_ser/buffer_0_13</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">peripheral_lvds</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/Contador_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">LVDS/led</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/outcount_0&gt; &lt;LVDS/videoencoder/channel2_ser/outcount_0&gt; &lt;LVDS/videoencoder/channel1_ser/outcount_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/outcount_1&gt; &lt;LVDS/videoencoder/channel2_ser/outcount_1&gt; &lt;LVDS/videoencoder/channel1_ser/outcount_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/outcount_2&gt; &lt;LVDS/videoencoder/channel2_ser/outcount_2&gt; &lt;LVDS/videoencoder/channel1_ser/outcount_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel3_ser/buffer_0_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/buffer_0_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel3_ser/buffer_0_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel2_ser/buffer_0_4&gt; &lt;LVDS/videoencoder/channel2_ser/buffer_0_3&gt; &lt;LVDS/videoencoder/channel2_ser/buffer_0_2&gt; &lt;LVDS/videoencoder/channel1_ser/buffer_0_3&gt; &lt;LVDS/videoencoder/channel1_ser/buffer_0_2&gt; &lt;LVDS/videoencoder/channel1_ser/buffer_0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel3_ser/buffer_0_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/buffer_0_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel3_ser/buffer_0_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">6 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel2_ser/buffer_0_11&gt; &lt;LVDS/videoencoder/channel2_ser/buffer_0_10&gt; &lt;LVDS/videoencoder/channel2_ser/buffer_0_9&gt; &lt;LVDS/videoencoder/channel1_ser/buffer_0_10&gt; &lt;LVDS/videoencoder/channel1_ser/buffer_0_9&gt; &lt;LVDS/videoencoder/channel1_ser/buffer_0_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/datacount</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/datacount&gt; &lt;LVDS/videoencoder/channel2_ser/datacount&gt; &lt;LVDS/videoencoder/channel1_ser/datacount&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/DataInBuffer</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/DataInBuffer&gt; &lt;LVDS/videoencoder/channel2_ser/DataInBuffer&gt; &lt;LVDS/videoencoder/channel1_ser/DataInBuffer&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/clockgenerator/lvdsclkman/SendOK</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel3_ser/SendOK&gt; &lt;LVDS/videoencoder/channel2_ser/SendOK&gt; &lt;LVDS/videoencoder/channel1_ser/SendOK&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">LVDS/videoencoder/channel2_ser/shiftdata_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">peripheral_lvds</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LVDS/videoencoder/channel1_ser/shiftdata_1&gt; </arg>
+</msg>
+
+</messages>
+

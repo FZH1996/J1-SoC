@@ -1,0 +1,998 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc6slx9-3tqg144
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : j1soc
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" into library work
+Parsing module <j1soc>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/j1.v" into library work
+Parsing module <j1>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/dpram.v" into library work
+Parsing module <dp_ram>.
+INFO:HDLCompiler:693 - "/home/parallels/Documents/J1_SoC/hdl/dpram.v" Line 24. parameter declaration becomes local in dp_ram with formal parameter declaration list
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/uart/uart.v" into library work
+Parsing module <uart>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/uart/peripheral_uart.v" into library work
+Parsing module <peripheral_uart>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/peripheral_mult.v" into library work
+Parsing module <peripheral_mult>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/mult_32/acc.v" into library work
+Parsing module <acc>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/mult_32/comp.v" into library work
+Parsing module <comp>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/mult_32/control_mult.v" into library work
+Parsing module <control_mult>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/mult_32/lsr.v" into library work
+Parsing module <lsr>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/mult_32/rsr.v" into library work
+Parsing module <rsr>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/multiplier/mult_32/mult_32.v" into library work
+Parsing module <mult_32>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/peripheral_div.v" into library work
+Parsing module <peripheral_div>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/div_16/control_div.v" into library work
+Parsing module <control_div>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/div_16/counter_div.v" into library work
+Parsing module <counter_div>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/div_16/div_16.v" into library work
+Parsing module <div_16>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/div_16/final_result.v" into library work
+Parsing module <final_result>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/div_16/lsr_div.v" into library work
+Parsing module <lsr_div>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/divider/div_16/subtractor.v" into library work
+Parsing module <subtractor>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/dpRAM/core_peripheric.v" into library work
+Parsing module <core_peripheric>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/dpRAM/dualport_RAM.v" into library work
+Parsing module <dualport_RAM>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/dpRAM/dpRAM_interface.v" into library work
+Parsing module <dpRAM_interface>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v" into library work
+Parsing module <peripheral_lvds>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" into library work
+Parsing module <LVDS_test>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/LVDS/serializer.v" into library work
+Parsing module <serializer>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/LVDS/lvds_clockgen.v" into library work
+Parsing module <lvds_clockgen>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/LVDS/video_lvds.v" into library work
+Parsing module <video_lvds>.
+Analyzing Verilog file "/home/parallels/Documents/J1_SoC/hdl/LVDS/dvi_decoder.v" into library work
+Parsing module <dvi_decoder>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <j1soc>.
+
+Elaborating module <j1(bootram_file="../firmware/Hello_World/j1.mem")>.
+
+Elaborating module <dp_ram(adr_width=13,dat_width=16,mem_file_name="../firmware/Hello_World/j1.mem")>.
+Reading initialization file \"home/parallels/Documents/J1_SoC/hdl/../firmware/Hello_World/j1.mem\".
+WARNING:HDLCompiler:189 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 46: Size mismatch in connection of port <en_b>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 47: Size mismatch in connection of port <adr_a>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 90: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 117: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 129: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 134: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 155: Result of 15-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/j1.v" Line 157: Result of 16-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:1127 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" Line 44: Assignment to j1_io_rd ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v" Line 60: Port led is not connected to this instance
+
+Elaborating module <peripheral_lvds>.
+WARNING:HDLCompiler:1016 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 57: Port CLK180 is not connected to this instance
+
+Elaborating module <LVDS_test>.
+WARNING:HDLCompiler:1127 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 44: Assignment to clkprueba ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 52: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 53: Result of 32-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <DCM_SP(CLKIN_PERIOD=10,CLKFX_MULTIPLY=3,CLKFX_DIVIDE=4)>.
+WARNING:HDLCompiler:1127 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 68: Assignment to clk_lckd ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <video_lvds>.
+
+Elaborating module <OBUFDS(IOSTANDARD="LVDS_33")>.
+WARNING:HDLCompiler:1016 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/lvds_clockgen.v" Line 57: Port PRE is not connected to this instance
+
+Elaborating module <lvds_clockgen>.
+
+Elaborating module <DCM_SP(CLKIN_PERIOD="15.625",DESKEW_ADJUST="0",CLKFX_MULTIPLY=7,CLKFX_DIVIDE=2)>.
+
+Elaborating module <FDP>.
+
+Elaborating module <serializer>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE")>.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/serializer.v" Line 64: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/serializer.v" Line 83: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 116: Result of 32-bit expression is truncated to fit in 31-bit target.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 30: Net <Red[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 31: Net <Blue[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v" Line 32: Net <Green[2]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v" Line 24: Net <R5[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v" Line 26: Net <R7[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v" Line 27: Net <R8[15]> does not have a driver.
+WARNING:HDLCompiler:189 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" Line 46: Size mismatch in connection of port <addr>. Formal port size is 3-bit while actual signal size is 4-bit.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" Line 35: Net <mult_dout[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" Line 36: Net <div_dout[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" Line 37: Net <uart_dout> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" Line 38: Net <dp_ram_dout[15]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <j1soc>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/j1soc.v".
+        bootram_file = "../firmware/Hello_World/j1.mem"
+WARNING:Xst:647 - Input <uart_rx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/parallels/Documents/J1_SoC/hdl/j1soc.v" line 44: Output port <io_rd> of the instance <cpu0> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <mult_dout> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <div_dout> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <dp_ram_dout> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <uart_dout> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <j1soc> synthesized.
+
+Synthesizing Unit <j1>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/j1.v".
+        bootram_file = "../firmware/Hello_World/j1.mem"
+    Found 32x16-bit dual-port RAM <Mram_dstack> for signal <dstack>.
+    Found 32x16-bit dual-port RAM <Mram_rstack> for signal <rstack>.
+    Found 5-bit register for signal <dsp>.
+    Found 16-bit register for signal <st0>.
+    Found 5-bit register for signal <rsp>.
+    Found 13-bit register for signal <pc>.
+    Found 14-bit adder for signal <n0144[13:0]> created at line 41.
+    Found 16-bit adder for signal <st0[15]_st1[15]_add_11_OUT> created at line 82.
+    Found 5-bit adder for signal <dsp[4]_GND_2_o_add_33_OUT> created at line 117.
+    Found 5-bit adder for signal <dsp[4]_dd[1]_add_34_OUT> created at line 122.
+    Found 5-bit adder for signal <rsp[4]_rd[1]_add_35_OUT> created at line 123.
+    Found 5-bit adder for signal <rsp[4]_GND_2_o_add_40_OUT> created at line 134.
+    Found 16-bit subtractor for signal <GND_2_o_GND_2_o_sub_20_OUT<15:0>> created at line 90.
+    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_38_OUT<4:0>> created at line 129.
+    Found 16-bit shifter logical right for signal <st1[15]_st0[3]_shift_right_18_OUT> created at line 89
+    Found 16-bit shifter logical left for signal <st1[15]_st0[3]_shift_left_22_OUT> created at line 93
+    Found 16-bit 16-to-1 multiplexer for signal <st0sel[3]_st1[15]_wide_mux_24_OUT> created at line 79.
+    Found 5-bit 4-to-1 multiplexer for signal <_n0188> created at line 126.
+    Found 5-bit 3-to-1 multiplexer for signal <_n0190> created at line 126.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0192> created at line 126.
+    Found 16-bit comparator equal for signal <st1[15]_st0[15]_equal_17_o> created at line 87
+    Found 16-bit comparator greater for signal <st0[15]_st1[15]_LessThan_18_o> created at line 88
+    Found 16-bit comparator greater for signal <st1[15]_st0[15]_LessThan_24_o> created at line 95
+    Summary:
+	inferred   2 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  41 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <j1> synthesized.
+
+Synthesizing Unit <dp_ram>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/dpram.v".
+        adr_width = 13
+        dat_width = 16
+        mem_file_name = "../firmware/Hello_World/j1.mem"
+    Found 8192x16-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <dat_a_out>.
+    Found 16-bit register for signal <dat_b>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <dp_ram> synthesized.
+
+Synthesizing Unit <peripheral_lvds>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/parallels/Documents/J1_SoC/hdl/LVDS/peripheral_lvds.v" line 60: Output port <led> of the instance <LVDS> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'R5', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R7', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:2935 - Signal 'R8', unconnected in block 'peripheral_lvds', is tied to its initial value (0000000000000000).
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R6<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <R4<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  80 Latch(s).
+	inferred   5 Multiplexer(s).
+Unit <peripheral_lvds> synthesized.
+
+Synthesizing Unit <LVDS_test>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/LVDS/LVDS_test.v".
+        ScreenX = 1366
+        ScreenY = 768
+        BlankingVertical = 12
+        BlankingHorizontal = 50
+WARNING:Xst:647 - Input <R1<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R2<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R3<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R4<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R5<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R6<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R7<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <R8<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'Red<2:0>', unconnected in block 'LVDS_test', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'Blue<2:0>', unconnected in block 'LVDS_test', is tied to its initial value (000).
+WARNING:Xst:2935 - Signal 'Green<2:0>', unconnected in block 'LVDS_test', is tied to its initial value (000).
+    Found 11-bit register for signal <ContadorY>.
+    Found 1-bit register for signal <Blue<7>>.
+    Found 1-bit register for signal <Blue<6>>.
+    Found 1-bit register for signal <Blue<5>>.
+    Found 1-bit register for signal <Blue<4>>.
+    Found 1-bit register for signal <Blue<3>>.
+    Found 1-bit register for signal <Red<7>>.
+    Found 1-bit register for signal <Red<6>>.
+    Found 1-bit register for signal <Red<5>>.
+    Found 1-bit register for signal <Red<4>>.
+    Found 1-bit register for signal <Red<3>>.
+    Found 1-bit register for signal <Green<7>>.
+    Found 1-bit register for signal <Green<6>>.
+    Found 1-bit register for signal <Green<5>>.
+    Found 1-bit register for signal <Green<4>>.
+    Found 1-bit register for signal <Green<3>>.
+    Found 31-bit register for signal <Contador>.
+    Found 1-bit register for signal <led>.
+    Found 11-bit register for signal <ContadorX>.
+    Found 12-bit adder for signal <n0086[11:0]> created at line 52.
+    Found 12-bit adder for signal <n0088[11:0]> created at line 53.
+    Found 31-bit adder for signal <Contador[30]_GND_85_o_add_36_OUT> created at line 116.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[15]_Mux_20_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[14]_Mux_21_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[13]_Mux_22_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[12]_Mux_23_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[11]_Mux_24_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[10]_Mux_25_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[9]_Mux_26_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[8]_Mux_27_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[7]_Mux_28_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[6]_Mux_29_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[5]_Mux_30_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[4]_Mux_31_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[3]_Mux_32_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[2]_Mux_33_o> created at line 97.
+    Found 1-bit 7-to-1 multiplexer for signal <ContadorX[9]_R8[1]_Mux_34_o> created at line 97.
+    Found 11-bit comparator greater for signal <PWR_87_o_ContadorX[10]_LessThan_1_o> created at line 46
+    Found 11-bit comparator greater for signal <ContadorX[10]_PWR_87_o_LessThan_2_o> created at line 46
+    Found 11-bit comparator greater for signal <GND_85_o_ContadorY[10]_LessThan_4_o> created at line 47
+    Found 11-bit comparator greater for signal <ContadorY[10]_GND_85_o_LessThan_5_o> created at line 47
+    Found 11-bit comparator greater for signal <ContadorX[10]_PWR_87_o_LessThan_7_o> created at line 48
+    Found 11-bit comparator greater for signal <ContadorY[10]_GND_85_o_LessThan_8_o> created at line 48
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <LVDS_test> synthesized.
+
+Synthesizing Unit <video_lvds>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/LVDS/video_lvds.v".
+WARNING:Xst:647 - Input <Red<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Green<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Blue<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <video_lvds> synthesized.
+
+Synthesizing Unit <lvds_clockgen>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/LVDS/lvds_clockgen.v".
+    Summary:
+	no macro.
+Unit <lvds_clockgen> synthesized.
+
+Synthesizing Unit <serializer>.
+    Related source file is "/home/parallels/Documents/J1_SoC/hdl/LVDS/serializer.v".
+    Found 3-bit register for signal <outcount>.
+    Found 2-bit register for signal <shiftdata>.
+    Found 14-bit register for signal <n0019>.
+    Found 1-bit register for signal <datacount>.
+    Found 1-bit register for signal <DataInBuffer>.
+    Found 1-bit register for signal <SendOK>.
+    Found 1-bit adder for signal <datacount_PWR_95_o_add_1_OUT<0>> created at line 64.
+    Found 3-bit adder for signal <outcount[2]_GND_93_o_add_8_OUT> created at line 83.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <serializer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x16-bit dual-port RAM                               : 2
+ 8192x16-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 16
+ 1-bit adder                                           : 4
+ 12-bit adder                                          : 2
+ 14-bit adder                                          : 1
+ 16-bit addsub                                         : 1
+ 3-bit adder                                           : 4
+ 31-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 1
+# Registers                                            : 49
+ 1-bit register                                        : 28
+ 11-bit register                                       : 2
+ 13-bit register                                       : 1
+ 14-bit register                                       : 4
+ 16-bit register                                       : 3
+ 2-bit register                                        : 4
+ 3-bit register                                        : 4
+ 31-bit register                                       : 1
+ 5-bit register                                        : 2
+# Latches                                              : 80
+ 1-bit latch                                           : 80
+# Comparators                                          : 9
+ 11-bit comparator greater                             : 6
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 98
+ 1-bit 2-to-1 multiplexer                              : 10
+ 1-bit 7-to-1 multiplexer                              : 15
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 25
+ 16-bit 3-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 24
+ 3-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 7
+ 7-bit 2-to-1 multiplexer                              : 8
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <LVDS_test>.
+The following registers are absorbed into counter <Contador>: 1 register on signal <Contador>.
+The following registers are absorbed into counter <ContadorX>: 1 register on signal <ContadorX>.
+Unit <LVDS_test> synthesized (advanced).
+
+Synthesizing (advanced) Unit <j1>.
+The following registers are absorbed into counter <dsp>: 1 register on signal <dsp>.
+INFO:Xst:3226 - The RAM <Mram_rstack> will be implemented as a BLOCK RAM, absorbing the following register(s): <rsp>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     weA            | connected to signal <_rstkW>        | high     |
+    |     addrA          | connected to signal <_rsp>          |          |
+    |     diA            | connected to signal <_rstkD>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <ram0/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <ram0/dat_a_out> <ram0/dat_b>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 16-bit                  |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <st0<13:1>>     |          |
+    |     diA            | connected to signal <io_dout>       |          |
+    |     doA            | connected to signal <ramrd>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <sys_clk_i>     | rise     |
+    |     addrB          | connected to signal <_pc>           |          |
+    |     doB            | connected to signal <insn>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dstack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     weA            | connected to signal <_dstkW>        | high     |
+    |     addrA          | connected to signal <_dsp>          |          |
+    |     diA            | connected to signal <st0>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     addrB          | connected to signal <dsp>           |          |
+    |     doB            | connected to signal <io_dout>       |          |
+    -----------------------------------------------------------------------
+Unit <j1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serializer>.
+The following registers are absorbed into counter <outcount>: 1 register on signal <outcount>.
+The following registers are absorbed into counter <datacount>: 1 register on signal <datacount>.
+Unit <serializer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x16-bit dual-port distributed RAM                   : 1
+ 32x16-bit single-port block RAM                       : 1
+ 8192x16-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 6
+ 12-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 16-bit addsub                                         : 1
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 1
+# Counters                                             : 11
+ 1-bit up counter                                      : 4
+ 11-bit up counter                                     : 1
+ 3-bit up counter                                      : 4
+ 31-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 134
+ Flip-Flops                                            : 134
+# Comparators                                          : 9
+ 11-bit comparator greater                             : 6
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 170
+ 1-bit 2-to-1 multiplexer                              : 111
+ 1-bit 7-to-1 multiplexer                              : 15
+ 13-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 25
+ 16-bit 3-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 7
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <j1soc> ...
+
+Optimizing unit <j1> ...
+
+Optimizing unit <peripheral_lvds> ...
+
+Optimizing unit <LVDS_test> ...
+
+Optimizing unit <video_lvds> ...
+
+Optimizing unit <serializer> ...
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_0> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_4> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_5> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_6> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_7> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_11> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_12> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel1_ser/buffer_0_13> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_0> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_1> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_5> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_6> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_7> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_8> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_12> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel2_ser/buffer_0_13> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel3_ser/buffer_0_6> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/channel3_ser/buffer_0_13> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_2> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_3> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_4> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_9> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_10> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_11> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <per_l/R1_0> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_0> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_0> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_0> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_0> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R1_4> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_4> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_4> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_4> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R1_5> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_5> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_4> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_5> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_5> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_5> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_9> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_9> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R1_9> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_9> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_9> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_10> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_10> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R1_10> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_10> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_10> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R1_14> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_14> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_14> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_14> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_14> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R1_15> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R6_15> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R4_15> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R3_15> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/R2_15> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_30> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_29> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_28> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_27> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_26> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_25> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_24> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_23> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_22> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_21> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_20> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_19> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_18> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_17> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_16> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_15> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_14> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_13> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_12> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_11> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_10> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_9> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_8> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_7> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_6> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_5> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_4> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_3> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_2> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_1> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Contador_0> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Green_6> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Green_7> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Red_6> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Red_7> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Blue_6> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/Blue_7> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:2677 - Node <per_l/LVDS/led> of sequential type is unconnected in block <j1soc>.
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/datacount> in Unit <j1soc> is equivalent to the following 3 FFs/Latches, which will be removed : <per_l/LVDS/videoencoder/channel3_ser/datacount> <per_l/LVDS/videoencoder/channel2_ser/datacount> <per_l/LVDS/videoencoder/channel1_ser/datacount> 
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_8> in Unit <j1soc> is equivalent to the following FF/Latch, which will be removed : <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/buffer_0_13> 
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_0> in Unit <j1soc> is equivalent to the following 3 FFs/Latches, which will be removed : <per_l/LVDS/videoencoder/channel3_ser/outcount_0> <per_l/LVDS/videoencoder/channel2_ser/outcount_0> <per_l/LVDS/videoencoder/channel1_ser/outcount_0> 
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_1> in Unit <j1soc> is equivalent to the following 3 FFs/Latches, which will be removed : <per_l/LVDS/videoencoder/channel3_ser/outcount_1> <per_l/LVDS/videoencoder/channel2_ser/outcount_1> <per_l/LVDS/videoencoder/channel1_ser/outcount_1> 
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/outcount_2> in Unit <j1soc> is equivalent to the following 3 FFs/Latches, which will be removed : <per_l/LVDS/videoencoder/channel3_ser/outcount_2> <per_l/LVDS/videoencoder/channel2_ser/outcount_2> <per_l/LVDS/videoencoder/channel1_ser/outcount_2> 
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/DataInBuffer> in Unit <j1soc> is equivalent to the following 3 FFs/Latches, which will be removed : <per_l/LVDS/videoencoder/channel3_ser/DataInBuffer> <per_l/LVDS/videoencoder/channel2_ser/DataInBuffer> <per_l/LVDS/videoencoder/channel1_ser/DataInBuffer> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <per_l/LVDS/videoencoder/clockgenerator/lvdsclkman/SendOK> in Unit <j1soc> is equivalent to the following 3 FFs/Latches, which will be removed : <per_l/LVDS/videoencoder/channel3_ser/SendOK> <per_l/LVDS/videoencoder/channel2_ser/SendOK> <per_l/LVDS/videoencoder/channel1_ser/SendOK> 
+Found area constraint ratio of 100 (+ 0) on block j1soc, actual ratio is 9.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 116
+ Flip-Flops                                            : 116
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 593
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 32
+#      LUT2                        : 28
+#      LUT3                        : 66
+#      LUT4                        : 62
+#      LUT5                        : 71
+#      LUT6                        : 185
+#      MUXCY                       : 76
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 61
+# FlipFlops/Latches                : 165
+#      FD                          : 15
+#      FDC                         : 36
+#      FDCE                        : 9
+#      FDE                         : 11
+#      FDR                         : 45
+#      LD                          : 45
+#      ODDR2                       : 4
+# RAMS                             : 15
+#      RAM32M                      : 2
+#      RAM32X1D                    : 4
+#      RAMB16BWER                  : 8
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 6
+#      BUFG                        : 6
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUFDS                      : 4
+# DCMs                             : 2
+#      DCM_SP                      : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             165  out of  11440     1%  
+ Number of Slice LUTs:                  466  out of   5720     8%  
+    Number used as Logic:               450  out of   5720     7%  
+    Number used as Memory:               16  out of   1440     1%  
+       Number used as RAM:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    505
+   Number with an unused Flip Flop:     340  out of    505    67%  
+   Number with an unused LUT:            39  out of    505     7%  
+   Number of fully used LUT-FF pairs:   126  out of    505    24%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  10  out of    102     9%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                9  out of     32    28%  
+    Number using Block RAM only:          9
+ Number of BUFG/BUFGCTRLs:                6  out of     16    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------+-----------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)       | Load  |
+---------------------------------------------------------------------------+-----------------------------+-------+
+sys_clk_i                                                                  | IBUFG+BUFG                  | 54    |
+per_l/addr[2]_GND_69_o_Mux_142_o(per_l/Mmux_addr[2]_GND_69_o_Mux_142_o11:O)| NONE(*)(per_l/R1_1)         | 9     |
+per_l/addr[2]_GND_53_o_Mux_110_o(per_l/Mmux_addr[2]_GND_53_o_Mux_110_o11:O)| NONE(*)(per_l/R6_1)         | 9     |
+per_l/addr[2]_GND_21_o_Mux_46_o(per_l/Mmux_addr[2]_GND_21_o_Mux_46_o11:O)  | NONE(*)(per_l/R3_1)         | 9     |
+per_l/addr[2]_GND_7_o_Mux_18_o(per_l/Mmux_addr[2]_GND_7_o_Mux_18_o11:O)    | NONE(*)(per_l/R4_1)         | 9     |
+per_l/addr[2]_GND_37_o_Mux_78_o(per_l/Mmux_addr[2]_GND_37_o_Mux_78_o11:O)  | NONE(*)(per_l/R2_1)         | 9     |
+sys_clk_i                                                                  | DCM_SP:CLKFX+DCM_SP:CLK0    | 65    |
+sys_clk_i                                                                  | DCM_SP:CLKFX+DCM_SP:CLKFX   | 16    |
+sys_clk_i                                                                  | DCM_SP:CLKFX+DCM_SP:CLKFX180| 4     |
+---------------------------------------------------------------------------+-----------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 11.839ns (Maximum Frequency: 84.469MHz)
+   Minimum input arrival time before clock: 6.896ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk_i'
+  Clock period: 11.839ns (frequency: 84.469MHz)
+  Total number of paths / destination ports: 993562 / 551
+-------------------------------------------------------------------------
+Delay:               11.839ns (Levels of Logic = 13)
+  Source:            cpu0/ram0/Mram_ram8 (RAM)
+  Destination:       cpu0/ram0/Mram_ram1 (RAM)
+  Source Clock:      sys_clk_i rising
+  Destination Clock: sys_clk_i rising
+
+  Data Path: cpu0/ram0/Mram_ram8 to cpu0/ram0/Mram_ram1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB0   62   1.850   1.731  cpu0/ram0/Mram_ram8 (cpu0/insn<14>)
+     LUT3:I1->O           78   0.203   1.733  cpu0/Mmux_st0sel<2>11 (cpu0/st0sel<2>)
+     LUT6:I5->O            1   0.205   0.580  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A601 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A60)
+     LUT6:I5->O            1   0.205   0.580  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A602 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A601)
+     LUT6:I5->O            1   0.205   0.580  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A603 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A602)
+     LUT6:I5->O            1   0.205   0.580  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A607 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_A<9>)
+     LUT6:I5->O            1   0.205   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_lut<9> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_lut<9>)
+     MUXCY:S->O            1   0.172   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<9> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<10> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<11> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<12> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<13> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<13>)
+     XORCY:CI->O           3   0.180   0.755  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_xor<14> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_split<14>)
+     LUT6:I4->O           32   0.203   1.291  cpu0/ramWE_GND_2_o_AND_1_o1 (cpu0/ramWE_GND_2_o_AND_1_o)
+     RAMB16BWER:WEA2           0.300          cpu0/ram0/Mram_ram1
+    ----------------------------------------
+    Total                     11.839ns (4.009ns logic, 7.830ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_i'
+  Total number of paths / destination ports: 419 / 169
+-------------------------------------------------------------------------
+Offset:              6.896ns (Levels of Logic = 4)
+  Source:            sys_rst_i (PAD)
+  Destination:       cpu0/Mram_rstack (RAM)
+  Destination Clock: sys_clk_i rising
+
+  Data Path: sys_rst_i to cpu0/Mram_rstack
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   1.222   1.802  sys_rst_i_IBUF (sys_rst_i_IBUF)
+     LUT5:I2->O           13   0.205   1.180  cpu0/mux10131 (cpu0/mux1013)
+     LUT5:I1->O           10   0.203   1.201  cpu0/mux13 (cpu0/_pc<0>)
+     LUT5:I0->O            1   0.203   0.579  cpu0/Mmux__rstkD17 (cpu0/_rstkD<0>)
+     RAMB8BWER:DIADI0          0.300          cpu0/Mram_rstack
+    ----------------------------------------
+    Total                      6.896ns (2.133ns logic, 4.763ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock per_l/addr[2]_GND_21_o_Mux_46_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |         |         |    2.888|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock per_l/addr[2]_GND_37_o_Mux_78_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |         |         |    2.888|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock per_l/addr[2]_GND_53_o_Mux_110_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |         |         |    2.888|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock per_l/addr[2]_GND_69_o_Mux_142_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |         |         |    2.888|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock per_l/addr[2]_GND_7_o_Mux_18_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |         |         |    2.888|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clk_i
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+per_l/addr[2]_GND_21_o_Mux_46_o |         |    2.272|         |         |
+per_l/addr[2]_GND_37_o_Mux_78_o |         |    2.415|         |         |
+per_l/addr[2]_GND_53_o_Mux_110_o|         |    1.613|         |         |
+per_l/addr[2]_GND_69_o_Mux_142_o|         |    2.170|         |         |
+per_l/addr[2]_GND_7_o_Mux_18_o  |         |    2.398|         |         |
+sys_clk_i                       |   11.839|         |         |         |
+--------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.76 secs
+ 
+--> 
+
+
+Total memory usage is 395068 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  230 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

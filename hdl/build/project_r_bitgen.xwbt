@@ -1,0 +1,7 @@
+INFILE=/home/parallels/Documents/J1_SoC/hdl/build/project_r.ncd
+OUTFILE=/home/parallels/Documents/J1_SoC/hdl/build/project_r.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/parallels/Documents/J1_SoC/hdl/build
+LICENSE=WebPack
+USER_INFO=211383071_0_0_378

@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 01 12:57:45 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock_n" LOCATE = SITE "P61" LEVEL 1;
+COMP "clock_p" LOCATE = SITE "P62" LEVEL 1;
+COMP "channel1_n" LOCATE = SITE "P50" LEVEL 1;
+COMP "channel1_p" LOCATE = SITE "P51" LEVEL 1;
+COMP "channel2_n" LOCATE = SITE "P55" LEVEL 1;
+COMP "channel2_p" LOCATE = SITE "P56" LEVEL 1;
+COMP "channel3_n" LOCATE = SITE "P57" LEVEL 1;
+COMP "channel3_p" LOCATE = SITE "P58" LEVEL 1;
+COMP "uart_rx" LOCATE = SITE "P69" LEVEL 1;
+COMP "sys_clk_i" LOCATE = SITE "P84" LEVEL 1;
+COMP "sys_rst_i" LOCATE = SITE "P123" LEVEL 1;
+SCHEMATIC END;
+
